@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "strict": true,
+    "target": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
+    "moduleResolution": "node",
+    "baseUrl": "src",
+  }
+}
