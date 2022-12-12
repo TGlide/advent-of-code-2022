@@ -41,3 +41,19 @@ export function normalizeMatrix<T>(matrix: T[][]): T[][] {
     return [...Array(diff).fill(null), ...row.filter(Boolean)];
   });
 }
+
+export function range(start: number, stop: number, step = 1) {
+  const res = [];
+  for (let i = start; i < stop; i += step) {
+    res.push(i);
+  }
+  return res;
+}
+
+export function splitInChunks<T>(arr: T[], chunkSize: number) {
+  const res = [];
+  for (let i = 0; i < arr.length; i += chunkSize) {
+    res.push(arr.slice(i, i + chunkSize));
+  }
+  return res;
+}
