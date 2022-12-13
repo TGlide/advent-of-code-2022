@@ -11,6 +11,10 @@ export function sum(arr: number[]) {
   return arr.reduce((acc, curr) => acc + curr, 0);
 }
 
+export function multiply(arr: number[]) {
+  return arr.reduce((acc, curr) => acc * curr, 1);
+}
+
 export function unique<T>(arr: T[]) {
   return [...new Set(arr)];
 }
@@ -56,4 +60,8 @@ export function splitInChunks<T>(arr: T[], chunkSize: number) {
     res.push(arr.slice(i, i + chunkSize));
   }
   return res;
+}
+
+export function remove<T>(arr: T[], index: number) {
+  return [...arr.slice(0, index), ...arr.slice(index + 1)];
 }
